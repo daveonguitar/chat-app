@@ -7,11 +7,12 @@ import LoginComponent from "./login/login";
 import SignupComponent from "./signup/signup";
 import DashboardComponent from "./dashboard/dashboard";
 
+require("dotenv").config();
 const firebase = require("firebase");
 require("firebase/firestore");
 
 firebase.initializeApp({
-  apiKey: "AIzaSyBjSxlGMn43TRzAu1CH83QX5ihA_H61h7g",
+  apiKey: process.env.APIKEY,
   authDomain: "chat-app81.firebaseapp.com",
   databaseURL: "https://chat-app81.firebaseio.com",
   projectId: "chat-app81",
